@@ -1,9 +1,9 @@
 branch-defaults:
   default:
-    environment: images-of-the-day-shippable
+    environment: shippable
     group_suffix: null
 global:
-  application_name: shippable
+  application_name: image-of-the-day
   default_ec2_keyname: shippable
   default_platform: Python
   default_region: us-east-1
