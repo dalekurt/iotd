@@ -1,6 +1,6 @@
 branch-defaults:
   default:
-    environment: image-of-the-day-dev
+    environment: image-of-the-day-shippable
     group_suffix: null
 global:
   application_name: image-of-the-day
