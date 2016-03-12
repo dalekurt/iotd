@@ -32,7 +32,7 @@ script:
   - cp config.yml .elasticbeanstalk/
 
 after_success:
-  - eb init && eb create
+  - eb init && eb create images-of-the-day-shippable
 
 after_failure:
   - eb logs
