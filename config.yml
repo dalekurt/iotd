@@ -1,0 +1,8 @@
+branch-defaults:
+  master:
+    environment: image-of-the-day
+global:
+  application_name: image-of-the-day-shippable
+  default_region: us-east-1
+  profile: eb-cli
+  sc: git
