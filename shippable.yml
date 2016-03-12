@@ -13,8 +13,8 @@ env:
     - AWS_ACCESS_KEY_ID=AKIAI7D5OMBB2PYYXY3Q
     - secure: c7lMtAQzgGAkYvxVXqiAqSDAUAp/JaRpnEKr3zMWMke+/7Db3PaW29QpG8MTqUEcc1TESMWxDpD6tJNjT1JQbDrjyJvUFMSifa+vo6vTzw404MQ4D3uaE4Y2bAOBsbRe8D25Xwe8t0jm5VNIrEf3hSjrz52hrigtKz5rhzKTK5gAZ4vp5DzQj5ogc9hQMXGyZgNAxU7z/eZd9jik+iNEAcuNLkd8nwuMGsg+hPhYvX0WlqafRm/jA4FsjsbHeiSVrnheSkodpR8yaoWvthN4FocgFFqZgdp2C0vL/vJp7FgVKHlelmJp72dVbSa0JUZ4ZXze0xE8c1r8M31wSCw5cw==
 
-#before_install:
-#  - SUDO=$(which sudo) && $SUDO pip install awsebcli
+services:
+  - postgres
 
 install:
   - pip install --upgrade pip
@@ -26,6 +26,7 @@ before_script:
   - echo '[profile eb-cli]' > ~/.aws/config
   - echo "aws_access_key_id = $AWS_ACCESS_KEY_ID" >> ~/.aws/config
   - echo "aws_secret_access_key = $AWS_SECRET_ACCESS_KEY" >> ~/.aws/config
+
 script:
   - mkdir -p .elasticbeanstalk
   - cp config.yml .elasticbeanstalk/
