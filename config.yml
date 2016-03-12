@@ -1,8 +1,11 @@
 branch-defaults:
-  master:
-    environment: image-of-the-day
+  default:
+    environment: image-of-the-day-dev
+    group_suffix: null
 global:
-  application_name: image-of-the-day-shippable
+  application_name: image-of-the-day
+  default_ec2_keyname: null
+  default_platform: Python
   default_region: us-east-1
   profile: eb-cli
   sc: git
