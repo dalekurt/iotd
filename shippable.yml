@@ -17,6 +17,8 @@ python:
 #    - python --version
 #services:
 #  - postgres
+services:
+  - postgres
 install:
   - pip install --upgrade pip
   - pip install -r requirements.txt
