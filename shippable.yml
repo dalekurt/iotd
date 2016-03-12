@@ -12,6 +12,10 @@ python:
   - pypy
   - pypy3
 
-build:
-  ci:
-    - python --version
+#build:
+#  ci:
+#    - python --version
+#services:
+#  - postgres
+install:
+  - pip install -r requirements.txt
