@@ -33,3 +33,6 @@ script:
 
 after_success:
   - eb init && eb deploy
+
+after_failure:
+  - eb logs
